@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Part1.HelloController">
+   <children>
+        <Button id="button" layoutX="230.0" layoutY="17.0" onAction="#onStartButton" text="Start" />
+       <Label fx:id="textEnter" layoutX="56.0" layoutY="59.0" text="Enter text" />
+       <Button layoutX="176.0" layoutY="170.0" onAction="#onCopyButton" prefHeight="25.0" prefWidth="149.0" text="Copy in toggle button" />
+      <TextField fx:id="textFieldEnter" layoutX="176.0" layoutY="55.0" onAction="#onEnterTextField" />
+      <CheckBox fx:id="buttonNext" layoutX="182.0" layoutY="100.0" mnemonicParsing="false" onAction="#onCheckBoxNext" text="Next" />
+      <Label fx:id="labelNext" layoutX="182.0" layoutY="143.0" />
+      <RadioButton fx:id="bold" layoutX="271.0" layoutY="100.0" mnemonicParsing="false" onAction="#onRadioButtonBold" text="Bold">
+         <toggleGroup>
+            <ToggleGroup fx:id="group" />
+         </toggleGroup>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="italic" layoutX="331.0" layoutY="100.0" mnemonicParsing="false" onAction="#onRadioButtonItalic" text="Italic" toggleGroup="$group">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></RadioButton>
+      <ToggleButton fx:id="toggle" layoutX="176.0" layoutY="210.0" mnemonicParsing="false" onAction="#onToggleButton" prefHeight="25.0" prefWidth="149.0" />
+      <CheckBox fx:id="checkButtonOk" layoutX="242.0" layoutY="242.0" mnemonicParsing="false" />
+   </children>
+</Pane>
