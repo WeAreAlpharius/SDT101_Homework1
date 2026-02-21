@@ -1,4 +1,4 @@
-package org.example.Part2;
+package Part2;
 
 public class Driver {
 
