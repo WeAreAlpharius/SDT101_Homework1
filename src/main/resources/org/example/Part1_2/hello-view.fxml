@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" alignment="CENTER" minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Part1_2.HelloController">
+   <children>
+      <ScrollPane fx:id="scrollPane" prefHeight="450.0" prefWidth="350.0">
+        <content>
+            <VBox fx:id="MessageBox" prefHeight="444.0" prefWidth="484.0" />
+        </content>
+      </ScrollPane>
+      <Pane prefHeight="151.0" prefWidth="500.0">
+         <children>
+            <ChoiceBox fx:id="MessageChoice" layoutX="392.0" layoutY="57.0" prefHeight="25.0" prefWidth="81.0" />
+            <Button fx:id="SubmitButton" layoutX="392.0" layoutY="92.0" mnemonicParsing="false" onAction="#onSubmit" text="Submit" />
+            <TextField fx:id="textField" layoutX="14.0" layoutY="58.0" prefHeight="55.0" prefWidth="363.0" />
+            <Label layoutX="40.0" layoutY="5.0" prefHeight="17.0" prefWidth="28.0" text="User" />
+            <ChoiceBox fx:id="ChoiceUser" layoutX="40.0" layoutY="19.0" prefHeight="25.0" prefWidth="120.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Pane>
+   </children>
+</VBox>
