@@ -1,8 +1,10 @@
 package org.example.Part1;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -21,12 +23,27 @@ public class HelloApplication extends Application {
             Controller a = new Controller("Controller" + i);
             int temp = i;
 
-            a.setOnMouseClicked(_ -> label.setText("Selected controller: " + temp));
+            //declaring interface
+            EventHandler<MouseEvent> handler = (_) -> {
+                label.setText("Selected controller: " + temp);
+                a.requestFocus();
+            };
+
+            a.setOnMouseClicked(handler);
+
+            a.focusedProperty().addListener((_, _, now) -> {
+                if (now) {
+                    a.changeRed();
+                } else {
+                    a.changeGrey();
+                }
+            });
 
             hBox.getChildren().add(a);
         }
 
         VBox vBox = new VBox(label, hBox);
+        vBox.setSpacing(30);
 
 
         Scene scene = new Scene(vBox, 1100, 500);
