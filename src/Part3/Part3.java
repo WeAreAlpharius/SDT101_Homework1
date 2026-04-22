@@ -1,7 +1,6 @@
 package Part3;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -77,12 +76,12 @@ public class Part3 {
         IO.println(LinLoop(a, 21));
         IO.println(LinRec(a, 21));
         IO.println(BinLoop(a, 21));
-        IO.println(BinLoop(a, 21));
+        IO.println(BinRec(a, 21));
 
         IO.println("\n" + a.indexOf(50));
         IO.println(LinLoop(a, 50));
         IO.println(LinRec(a, 50));
         IO.println(BinLoop(a, 50));
-        IO.println(BinLoop(a, 50));
+        IO.println(BinRec(a, 50));
     }
 }
